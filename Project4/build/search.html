@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<title>eBay Search</title>
+	</head>
+	<body>
+		<h3>Search Item by Keyword</h3>
+		<form action="/eBay/search" method="GET">
+			<input type="text" id="query" name="query" autocomplete="off" placeholder="keyword">
+			<input type="hidden" value="0" name="numToSkip" placeholder="number of items to skip">
+			<input type="hidden" value="20" name="numToReturn" placeholder="number of items to return">
+			<button type="submit">Search</button>
+		</form>
+		
+		<h3>Search Item by ID</h3>
+		<form action="/eBay/item" method="GET">
+			<input type="text" id="itemID" name="itemID" autocomplete="off" placeholder="item ID">
+			<button type="submit">Search</button>
+		</form>
+	</body>
+</html>

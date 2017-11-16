@@ -1,0 +1,11 @@
+-- ==== Project 2: PART D ==== --
+
+-- load table --
+LOAD DATA LOCAL INFILE "Item.csv" INTO TABLE Item 
+	FIELDS TERMINATED BY "|*|";
+LOAD DATA LOCAL INFILE "Bidder.csv" INTO TABLE Bidder 
+	FIELDS TERMINATED BY "|*|";
+LOAD DATA LOCAL INFILE "User.csv" INTO TABLE User 
+	FIELDS TERMINATED BY "|*|";
+LOAD DATA LOCAL INFILE "Category.csv" INTO TABLE Category 
+	FIELDS TERMINATED BY "|*|";

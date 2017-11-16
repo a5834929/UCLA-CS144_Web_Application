@@ -1,0 +1,10 @@
+val lines = sc.textFile("twitter.edges")
+val token = lines.map(line => line.split(": "))
+val follower = token.flatMap( arr => {
+  val id = arr(1)
+  val ids = id.split(",")
+  ids.map( usr => (usr, 1))
+})
+val usrCounts = follower.reduceByKey((a, b) => a + b)
+val finalCounts = usrCounts.filter( _._2>1000)
+finalCounts.saveAsTextFile("output")
